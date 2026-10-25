@@ -88,7 +88,6 @@ The public Instacart dataset alone **cannot validate** operational service delay
 ```text
 instacart-customer-basket-product-analytics/
 ├── README.md
-├── .gitignore
 ├── sql/
 │   ├── README.md                    # original-to-renamed filename map
 │   ├── 01_customer_behavior/        # customer counts, quartiles, shopping time
