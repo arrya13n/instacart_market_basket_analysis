@@ -45,7 +45,6 @@ Direct Lake / Power BI semantic model
 Three Power BI report pages
 ```
 
-The SQL scripts in [`sql/`](sql/) query cleaned Silver data for validation and exploratory analysis. The Gold tables and Power BI model are built in Fabric; a complete export of the live workspace is **not** included in this package.
 
 ## Dashboard pages
 
@@ -55,7 +54,6 @@ The SQL scripts in [`sql/`](sql/) query cleaned Silver data for validation and e
 | **02 · Basket & Reorders** | Basket size vs reorder-rate scatter, 100% stacked new-vs-reordered composition by order number, first-cart-product treemap | Improve repeat-purchase and product-discovery experiences |
 | **03 · Product & Category Intelligence** | Department purchase-volume/reorder-rate combo chart with aisle drill-down, top products ranking, selected-product hourly comparison | Prioritize category/product analysis and test complementary-product merchandising |
 
-See [`dashboards/README.md`](dashboards/README.md) for a screenshot/export checklist and semantic-model field definitions.
 
 ## Selected findings
 
@@ -83,21 +81,6 @@ These are descriptive findings from the exploratory SQL and Power BI work, not c
 
 The public Instacart dataset alone **cannot validate** operational service delays, stockouts or experiment results.
 
-## Repository structure
-
-```text
-instacart-customer-basket-product-analytics/
-├── README.md
-├── sql/
-│   ├── 01_customer_behavior/        # customer counts, quartiles, shopping time
-│   ├── 02_basket_reorders/          # basket size, order history, gaps
-│   ├── 03_product_category/         # department/aisle and product analysis
-│   ├── 04_market_basket/            # Banana co-purchase query
-│   └── 05_supplementary/           # additional exploratory SQL
-├── dashboards/
-│   └── README.md                    # dashboard guide and screenshot checklist
-```
-
 ## How to reproduce the SQL analysis
 
 1. Download the dataset from the Kaggle competition and ingest source tables into a Microsoft Fabric Lakehouse.
@@ -119,7 +102,3 @@ Microsoft Fabric, Fabric Lakehouse (Bronze/Silver/Gold), PySpark, Delta tables, 
 - Return gaps are not true calendar dates; 30 represents 30+ days.
 - Co-purchase counts alone do not establish association strength or causal effectiveness of cross-selling.
 - Dashboard findings are historical descriptive evidence; recommendations are **experiments or operational follow-ups**, not verified business outcomes.
-
-## Data attribution
-
-Analysis uses the [Instacart Market Basket Analysis competition dataset on Kaggle](https://www.kaggle.com/competitions/instacart-market-basket-analysis). Raw data is intentionally not checked into this repository; refer to the source's terms before redistribution.
