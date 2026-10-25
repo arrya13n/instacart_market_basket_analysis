@@ -4,7 +4,6 @@
 
 A portfolio project using the public Instacart Market Basket Analysis dataset to investigate **customer shopping patterns, basket composition, repeat purchases and product/category performance**, then translate findings into three decision-focused Power BI report pages.
 
-> **Scope:** This repository contains the SQL analysis scripts, dashboard documentation and validation notes. The interactive Fabric workspace and Power BI semantic model are not embedded here. Report exports/screenshots can be added to `dashboards/` once exported and reviewed for public sharing.
 
 ## Business questions
 
